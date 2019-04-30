@@ -12,6 +12,7 @@ private:
 	int cpu_time;					// Allocated CPU time (defaults to 5min)
 	int seed;						// Random seed (defaults to 0, in this case the current time value will be used as seed)
 	int maxDepth;					// Maximum depth for the classification tree (defaults to 4)
+	int sizeRCL;					// Size of Restricted Candidate List
 	std::string instance_name;		// Instance path
 	std::string output_name;		// Output path
 
@@ -43,7 +44,7 @@ public:
 	Commandline(int argc, char* argv[])
 	{
 		command_ok = true;
-		if (argc % 2 != 0 || argc > 10 || argc < 2)
+		if (argc % 2 != 0 || argc > 11 || argc < 2)
 		{
 			std::cout << "ISSUE WITH THE NUMBER OF COMMANDLINE ARGUMENTS: " << argc << std::endl;
 			command_ok = false;
@@ -56,6 +57,7 @@ public:
 			cpu_time = 300;
 			seed = 0;
 			maxDepth = 4;
+			sizeRCL = 1;
 
 			for (int i = 2; i < argc; i += 2)
 			{
@@ -67,6 +69,8 @@ public:
 					seed = atoi(argv[i+1]);
 				else if (std::string(argv[i]) == "-depth")
 					maxDepth = atoi(argv[i+1]);
+				else if (std::string(argv[i]) == "-sizeRCL")
+					sizeRCL = atoi(argv[i+1]);
 				
 				else
 				{
@@ -91,6 +95,9 @@ public:
 
 	// Getting the depth
 	int get_maxDepth() { return maxDepth; }
+
+	// Getting the depth
+	int get_sizeRCL() { return sizeRCL; }
 
 	// Tests whether the commandline parameters are OK
 	bool is_valid() { return command_ok; }

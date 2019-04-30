@@ -25,6 +25,7 @@ public:
 	int seed;						// Random seed (for randomized algorithms)
 	clock_t maxTime;				// CPU time limit, if you want to use such a limit in your metaheuristic
 	int maxDepth ;					// Depth limit for the decision tree
+	int sizeRCL ;
 
 	/* DATASET INFORMATION */
 	std::string datasetName;								// Name of the dataset
@@ -41,7 +42,7 @@ public:
 	clock_t endTime;				// Time when the algorithm ended 
 
 	/* CONSTRUCTOR */
-	Params(std::string pathToInstance, std::string pathToSolution, int seedRNG, int maxDepth, clock_t maxTime);
+	Params(std::string pathToInstance, std::string pathToSolution, int seedRNG, int maxDepth, int sizeRCL, clock_t maxTime);
 };
 #endif
 

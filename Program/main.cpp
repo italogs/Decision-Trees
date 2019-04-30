@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 	if (c.is_valid())
 	{
 		// Initialization of the problem data from the commandline
-		Params params(c.get_path_to_instance(), c.get_path_to_solution(), c.get_seed(), c.get_maxDepth(), c.get_cpu_time() * CLOCKS_PER_SEC);
+		Params params(c.get_path_to_instance(), c.get_path_to_solution(), c.get_seed(), c.get_maxDepth(), c.get_sizeRCL(), c.get_cpu_time() * CLOCKS_PER_SEC);
 
 		// Initialization of a solution structure
 		Solution solution(&params);

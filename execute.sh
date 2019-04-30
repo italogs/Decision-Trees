@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export PATH=/usr/bin:$PATH
+
 cd Program
 ls
 rm dec-tree
@@ -11,5 +13,5 @@ cd ..
 INSTANCES=('p01.txt' 'p02.txt' 'p03.txt' 'p04.txt' 'p05.txt' 'p06.txt' 'p07.txt' 'p08.txt' 'p09.txt' 'p10.txt')
 for instance in "${INSTANCES[@]}" 
 do 
-    Program/dec-tree Datasets/$instance -depth 3 -t 600 -sol Solutions/$instance
+    Program/dec-tree Datasets/$instance -depth 4 -t 600 -sizeRCL 3 -sol Solutions/$instance
 done

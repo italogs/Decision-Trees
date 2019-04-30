@@ -16,9 +16,10 @@ void Greedy::recursiveConstruction(int node, int level)
 	bool allIdentical = true; // To detect contradictory data
 	int nbSamplesNode = solution->tree[node].nbSamplesNode;
 	double originalEntropy = solution->tree[node].entropy;
-	double bestInformationGain = -1.e30;
-	int bestSplitAttribute = -1;
-	double bestSplitThrehold = -1.e30;
+	std::vector <std::pair<double, int>> bestSplits;
+	std::vector <double> bestSplitsInformationGain;
+	double worstBestInformationGain = -1.e30;
+	int worstBestInformationGainIndex = -1;
 	for (int att = 0; att < params->nbAttributes; att++)
 	{
 		if (params->attributeTypes[att] == TYPE_NUMERICAL)
@@ -73,11 +74,41 @@ void Greedy::recursiveConstruction(int node, int level)
 
 					// Evaluate the information gain and store if this is the best option found until now
 					double informationGain = originalEntropy - ((double)indexSample*entropyLeft + (double)(nbSamplesNode - indexSample)*entropyRight) / (double)nbSamplesNode;
-					if (informationGain > bestInformationGain)
+					if (bestSplits.size() < this->sizeRCL)
+					{//if vector is not full, inserts anyway
+						bestSplits.push_back(std::make_pair(attributeValue,att));
+						bestSplitsInformationGain.push_back(informationGain);
+						if(bestSplits.size() == 1 || informationGain <= worstBestInformationGain) 
+						{
+							worstBestInformationGain = informationGain;
+							worstBestInformationGainIndex = bestSplitsInformationGain.size() - 1;
+						}
+						worstBestInformationGainIndex = 0;
+						worstBestInformationGain = bestSplitsInformationGain[worstBestInformationGainIndex];
+						for(int i = 1 ; i < bestSplits.size() ; i++)
+						{
+							if(bestSplitsInformationGain[i] <= worstBestInformationGain)
+							{
+								worstBestInformationGain = bestSplitsInformationGain[i];
+								worstBestInformationGainIndex = i;
+							}
+						}
+					} 
+					else if(informationGain > worstBestInformationGain)
 					{
-						bestInformationGain = informationGain;
-						bestSplitAttribute = att;
-						bestSplitThrehold = attributeValue;
+						bestSplits[worstBestInformationGainIndex].first = attributeValue;
+						bestSplits[worstBestInformationGainIndex].second = att;
+						bestSplitsInformationGain[worstBestInformationGainIndex] = informationGain;
+						worstBestInformationGainIndex = 0;
+						worstBestInformationGain = bestSplitsInformationGain[worstBestInformationGainIndex];
+						for(int i = 1 ; i < bestSplits.size() ; i++)
+						{
+							if(bestSplitsInformationGain[i] <= worstBestInformationGain)
+							{
+								worstBestInformationGain = bestSplitsInformationGain[i];
+								worstBestInformationGainIndex = i;
+							}
+						}
 					}
 				}
 			}
@@ -122,17 +153,51 @@ void Greedy::recursiveConstruction(int node, int level)
 
 					// Evaluate the information gain and store if this is the best option found until now
 					double informationGain = originalEntropy - ((double)nbSamplesLevel[level] *entropyLevel + (double)(nbSamplesNode - nbSamplesLevel[level])*entropyOthers) / (double)nbSamplesNode;
-					if (informationGain > bestInformationGain)
+					if (bestSplits.size() < this->sizeRCL)
+					{//if vector is not full, inserts anyway
+						bestSplits.push_back(std::make_pair(level,att));
+						bestSplitsInformationGain.push_back(informationGain);
+						if(bestSplits.size() == 1 || informationGain <= worstBestInformationGain) {
+							worstBestInformationGain = informationGain;
+							worstBestInformationGainIndex = bestSplitsInformationGain.size() - 1;
+						}
+
+						worstBestInformationGainIndex = 0;
+						worstBestInformationGain = bestSplitsInformationGain[worstBestInformationGainIndex];
+						for(int i = 1 ; i < bestSplits.size() ; i++)
+						{
+							if(bestSplitsInformationGain[i] <= worstBestInformationGain)
+							{
+								worstBestInformationGain = bestSplitsInformationGain[i];
+								worstBestInformationGainIndex = i;
+							}
+						}
+					} 
+					else if(informationGain > worstBestInformationGain)
 					{
-						bestInformationGain = informationGain;
-						bestSplitAttribute = att;
-						bestSplitThrehold = level;
+						bestSplits[worstBestInformationGainIndex].first = level;
+						bestSplits[worstBestInformationGainIndex].second = att;
+						bestSplitsInformationGain[worstBestInformationGainIndex] = informationGain;
+						
+						worstBestInformationGainIndex = 0;
+						worstBestInformationGain = bestSplitsInformationGain[worstBestInformationGainIndex];
+						
+						for(int i = 1 ; i < bestSplits.size() ; i++)
+						{
+							if(bestSplitsInformationGain[i] <= worstBestInformationGain)
+							{
+								worstBestInformationGain = bestSplitsInformationGain[i];
+								worstBestInformationGainIndex = i;
+							}
+						}
 					}
 				}
 			}
 		}
 	}
-
+	int pick = std::rand() % this->sizeRCL;
+	double bestSplitThrehold = bestSplits[pick].first;
+	int bestSplitAttribute = bestSplits[pick].second;
 	/* SPECIAL CASE TO HANDLE POSSIBLE CONTADICTIONS IN THE DATA */
 	// (Situations where the same samples have different classes -- In this case no improving split can be found)
 	if (allIdentical) return;

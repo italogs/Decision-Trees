@@ -1,6 +1,6 @@
 #include "Params.h"
 
-Params::Params(std::string pathToInstance, std::string pathToSolution, int seedRNG, int maxDepth, clock_t maxTime) : seed(seedRNG), pathToInstance(pathToInstance), pathToSolution(pathToSolution), maxDepth(maxDepth), maxTime(maxTime)
+Params::Params(std::string pathToInstance, std::string pathToSolution, int seedRNG, int maxDepth, int sizeRCL, clock_t maxTime) : seed(seedRNG), pathToInstance(pathToInstance), pathToSolution(pathToSolution), maxDepth(maxDepth), sizeRCL(sizeRCL), maxTime(maxTime)
 {
 	// Initializing random number generator here (if you have nondeterministic components)
 	// std::srand(seedRNG);
@@ -45,6 +45,7 @@ Params::Params(std::string pathToInstance, std::string pathToSolution, int seedR
 		std::cout << "----- NUMBER OF SAMPLES: " << nbSamples << std::endl;
 		std::cout << "----- NUMBER OF ATTRIBUTES: " << nbAttributes << std::endl;
 		std::cout << "----- NUMBER OF CLASSES: " << nbClasses << std::endl;
+		std::cout << "----- SEED: " << seedRNG << "; SIZERCL: " << sizeRCL << std::endl;
 	}
 	else
 		std::cout << "----- IMPOSSIBLE TO OPEN DATASET: " << pathToInstance << std::endl;

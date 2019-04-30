@@ -1,6 +1,6 @@
 all : dec-tree clean
 
-CCC = g++
+CCC = g++-8
 CCFLAGS = -O3 
 LIBS= -lm
 TARGETDIR=.

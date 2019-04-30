@@ -10,6 +10,7 @@ private:
 
 	Params * params;		 // Access to the problem and dataset parameters
 	Solution * solution;	 // Access to the solution structure to be filled
+	int sizeRCL;			 // Size of Restricted Candidate List (>=1, then its randomized)
 
 	// Main recursive function to run the greedy algorithm on the tree
 	// Recursive call on a given node and level in the tree
@@ -25,7 +26,9 @@ public:
     void run();
 
 	// Constructor
-	Greedy(Params * params, Solution * solution): params(params), solution(solution){};
+	Greedy(Params * params, Solution * solution): params(params), solution(solution){
+		this->sizeRCL = params->sizeRCL;
+	};
 };
 
 #endif
