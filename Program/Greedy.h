@@ -3,6 +3,7 @@
 
 #include "Params.h"
 #include "Solution.h"
+#include "LocalSearch.h"
 
 class Greedy
 {

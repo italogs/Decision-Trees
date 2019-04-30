@@ -2,6 +2,7 @@
 #include "Params.h"
 #include "Solution.h"
 #include "Greedy.h"
+#include "LocalSearch.h"
 
 int main(int argc, char *argv[])
 {
@@ -19,6 +20,9 @@ int main(int argc, char *argv[])
 		params.startTime = clock();
 		Greedy solver(&params,&solution);
 		solver.run();
+		LocalSearch ls123(&params,&solution);
+		ls123.run();
+
 		params.endTime = clock();
 		std::cout << "----- DECISION TREE OPTIMIZATION COMPLETED IN " << (params.endTime - params.startTime) / (double)CLOCKS_PER_SEC << "(s)" << std::endl;
 		

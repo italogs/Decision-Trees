@@ -66,7 +66,7 @@ private:
 
 	// Access to the problem and dataset parameters
 	Params * params;
-
+	int nbMisclassifiedSamples;
 public:
 
 	// Vector representing the tree
@@ -74,11 +74,30 @@ public:
 	// Left child of tree[k]: tree[2*k+1]
 	// Right child of tree[k]: tree[2*k+2]
 	std::vector <Node> tree;
+	
+	int getMisclassifiedSamples() {
+		return this->nbMisclassifiedSamples;
+	}
+
+	void calculateMisclassifiedSamples() {
+		this->nbMisclassifiedSamples = 0;
+		for (int d = 0; d <= params->maxDepth; d++)
+		{
+			// Printing one complete level of the tree
+			for (int i = pow(2, d) - 1; i < pow(2, d + 1) - 1; i++)
+			{
+				 if (tree[i].nodeType == Node::NODE_LEAF)
+				{
+					int misclass = tree[i].nbSamplesNode - tree[i].nbSamplesClass[tree[i].majorityClass];
+					this->nbMisclassifiedSamples += misclass;
+				}
+			}
+		}
+	}
 
 	// Prints the final solution
 	void printAndExport(std::string fileName)
 	{
-		int nbMisclassifiedSamples = 0;
 		std::cout << std::endl << "---------------------------------------- PRINTING SOLUTION ----------------------------------------" << std::endl;
 		for (int d = 0; d <= params->maxDepth; d++)
 		{
@@ -90,13 +109,12 @@ public:
 				else if (tree[i].nodeType == Node::NODE_LEAF)
 				{
 					int misclass = tree[i].nbSamplesNode - tree[i].nbSamplesClass[tree[i].majorityClass];
-					nbMisclassifiedSamples += misclass;
 					std::cout << "(L" << i << ",C" << tree[i].majorityClass << "," << tree[i].nbSamplesClass[tree[i].majorityClass] << "," << misclass << ") ";
 				}
 			}
 			std::cout << std::endl;
 		}
-		std::cout << nbMisclassifiedSamples << "/" << params->nbSamples << " MISCLASSIFIED SAMPLES" << std::endl;
+		std::cout << this->nbMisclassifiedSamples << "/" << params->nbSamples << " MISCLASSIFIED SAMPLES" << std::endl;
 		std::cout << "---------------------------------------------------------------------------------------------------" << std::endl << std::endl;
 
 		std::ofstream myfile;
@@ -105,7 +123,7 @@ public:
 		{
 			myfile << "TIME(s): " << (params->endTime - params->startTime) / (double)CLOCKS_PER_SEC << std::endl;
 			myfile << "NB_SAMPLES: " << params->nbSamples << std::endl;
-			myfile << "NB_MISCLASSIFIED: " << nbMisclassifiedSamples << std::endl;
+			myfile << "NB_MISCLASSIFIED: " << this->nbMisclassifiedSamples << std::endl;
 			myfile.close();
 		}
 		else

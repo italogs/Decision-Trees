@@ -2,8 +2,10 @@
 
 void Greedy::run()
 {
+	printf("Starting Greedy Constructive Method\n");
 	// Call the recursive procedure on the root node at level 0
 	recursiveConstruction(0,0); 
+	solution->calculateMisclassifiedSamples();
 }
 
 void Greedy::recursiveConstruction(int node, int level)
