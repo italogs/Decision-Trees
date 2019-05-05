@@ -2,6 +2,7 @@
 #define SOLUTION_H
 
 #include <vector>
+#include <climits>
 #include "Params.h"
 
 // Structure representing one node of the (orthogonal) decision tree or a leaf
@@ -75,29 +76,22 @@ public:
 	// Right child of tree[k]: tree[2*k+2]
 	std::vector <Node> tree;
 	
-	int getMisclassifiedSamples() {
+	int getMisclassifiedSamples()
+	{
 		return this->nbMisclassifiedSamples;
 	}
 
-	void calculateMisclassifiedSamples() {
-		this->nbMisclassifiedSamples = 0;
-		for (int d = 0; d <= params->maxDepth; d++)
-		{
-			// Printing one complete level of the tree
-			for (int i = pow(2, d) - 1; i < pow(2, d + 1) - 1; i++)
-			{
-				 if (tree[i].nodeType == Node::NODE_LEAF)
-				{
-					int misclass = tree[i].nbSamplesNode - tree[i].nbSamplesClass[tree[i].majorityClass];
-					this->nbMisclassifiedSamples += misclass;
-				}
-			}
-		}
+	static void copySolution(Solution *destination, Solution *source)
+	{
+		destination->tree = source->tree;
+		destination->params = source->params;
+		destination->nbMisclassifiedSamples = source->nbMisclassifiedSamples;
 	}
 
 	// Prints the final solution
 	void printAndExport(std::string fileName)
 	{
+		this->nbMisclassifiedSamples = 0;
 		std::cout << std::endl << "---------------------------------------- PRINTING SOLUTION ----------------------------------------" << std::endl;
 		for (int d = 0; d <= params->maxDepth; d++)
 		{
@@ -109,6 +103,7 @@ public:
 				else if (tree[i].nodeType == Node::NODE_LEAF)
 				{
 					int misclass = tree[i].nbSamplesNode - tree[i].nbSamplesClass[tree[i].majorityClass];
+					this->nbMisclassifiedSamples += misclass;
 					std::cout << "(L" << i << ",C" << tree[i].majorityClass << "," << tree[i].nbSamplesClass[tree[i].majorityClass] << "," << misclass << ") ";
 				}
 			}
@@ -132,6 +127,7 @@ public:
 
 	Solution(Params * params):params(params)
 	{
+		this->nbMisclassifiedSamples = INT_MAX;
 		// Initializing tree data structure and the nodes inside -- The size of the tree is 2^{maxDepth} - 1
 		tree = std::vector <Node>(pow(2,params->maxDepth+1)-1,Node(params));
 

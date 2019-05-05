@@ -1,0 +1,190 @@
+----- DATASET [ACUTE_INFLAMMATIONS_1] LOADED IN 0.003121(s)
+----- NUMBER OF SAMPLES: 120
+----- NUMBER OF ATTRIBUTES: 6
+----- NUMBER OF CLASSES: 2
+----- SEED: 0; SIZERCL: 1
+----- STARTING DECISION TREE OPTIMIZATION
+Misclassified: 0
+----- DECISION TREE OPTIMIZATION COMPLETED IN 0.000142(s)
+
+---------------------------------------- PRINTING SOLUTION ----------------------------------------
+(N0,A[3]=0) 
+(L1,C0,40,0) (N2,A[4]=0) 
+(N5,A[0]<=37.9) (L6,C1,49,0) 
+(L11,C1,10,0) (L12,C0,21,0) 
+
+0/120 MISCLASSIFIED SAMPLES
+---------------------------------------------------------------------------------------------------
+
+----- END OF ALGORITHM
+----- DATASET [ACUTE_INFLAMMATIONS_2] LOADED IN 0.002942(s)
+----- NUMBER OF SAMPLES: 120
+----- NUMBER OF ATTRIBUTES: 6
+----- NUMBER OF CLASSES: 2
+----- SEED: 0; SIZERCL: 1
+----- STARTING DECISION TREE OPTIMIZATION
+Misclassified: 0
+----- DECISION TREE OPTIMIZATION COMPLETED IN 0.000114(s)
+
+---------------------------------------- PRINTING SOLUTION ----------------------------------------
+(N0,A[0]<=37.9) 
+(L1,C0,60,0) (N2,A[2]=0) 
+(L5,C0,10,0) (L6,C1,50,0) 
+
+
+0/120 MISCLASSIFIED SAMPLES
+---------------------------------------------------------------------------------------------------
+
+----- END OF ALGORITHM
+----- DATASET [BALANCE_SCALE] LOADED IN 0.004482(s)
+----- NUMBER OF SAMPLES: 625
+----- NUMBER OF ATTRIBUTES: 4
+----- NUMBER OF CLASSES: 3
+----- SEED: 0; SIZERCL: 1
+----- STARTING DECISION TREE OPTIMIZATION
+Misclassified: 181
+----- DECISION TREE OPTIMIZATION COMPLETED IN 0.000254(s)
+
+---------------------------------------- PRINTING SOLUTION ----------------------------------------
+(N0,A[0]=0) 
+(N1,A[2]=0) (N2,A[1]=0) 
+(N3,A[1]=0) (N4,A[3]=0) (N5,A[2]=0) (N6,A[2]=0) 
+(N7,A[3]=0) (N8,A[3]=4) (N9,A[1]=4) (N10,A[2]=1) (N11,A[3]=4) (N12,A[3]=0) (N13,A[0]=1) (N14,A[3]=0) 
+(L15,C1,1,0) (L16,C2,4,0) (L17,C2,3,1) (L18,C0,10,6) (L19,C0,3,1) (L20,C2,10,6) (L21,C2,18,2) (L22,C2,60,0) (L23,C2,3,1) (L24,C0,10,6) (L25,C0,6,10) (L26,C2,62,2) (L27,C0,18,2) (L28,C0,60,0) (L29,C0,62,2) (L30,C0,114,142) 
+181/625 MISCLASSIFIED SAMPLES
+---------------------------------------------------------------------------------------------------
+
+----- END OF ALGORITHM
+----- DATASET [BANKNOTE_AUTHENTIFICATION] LOADED IN 0.008194(s)
+----- NUMBER OF SAMPLES: 1372
+----- NUMBER OF ATTRIBUTES: 4
+----- NUMBER OF CLASSES: 2
+----- SEED: 0; SIZERCL: 1
+----- STARTING DECISION TREE OPTIMIZATION
+Misclassified: 24
+----- DECISION TREE OPTIMIZATION COMPLETED IN 0.007198(s)
+
+---------------------------------------- PRINTING SOLUTION ----------------------------------------
+(N0,A[0]<=0.31803) 
+(N1,A[1]<=5.8333) (N2,A[0]<=1.7875) 
+(N3,A[2]<=6.2169) (N4,A[0]<=-4.1479) (N5,A[2]<=-2.2726) (N6,A[2]<=-4.8037) 
+(N7,A[0]<=-0.36372) (N8,A[1]<=-4.7428) (N9,A[2]<=1.0836) (L10,C0,96,0) (N11,A[1]<=5.2022) (N12,A[3]<=0.087054) (N13,A[0]<=2.3917) (N14,A[0]<=2.031) 
+(L15,C1,308,0) (L16,C1,55,2) (L17,C1,130,1) (L18,C0,24,1) (L19,C1,39,0) (L20,C0,1,0) (L23,C1,54,0) (L24,C0,3,0) (L25,C0,131,1) (L26,C0,27,17) (L27,C1,3,0) (L28,C0,2,0) (L29,C0,34,2) (L30,C0,441,0) 
+24/1372 MISCLASSIFIED SAMPLES
+---------------------------------------------------------------------------------------------------
+
+----- END OF ALGORITHM
+----- DATASET [BLOOD_TRANSFUSION] LOADED IN 0.005097(s)
+----- NUMBER OF SAMPLES: 748
+----- NUMBER OF ATTRIBUTES: 4
+----- NUMBER OF CLASSES: 2
+----- SEED: 0; SIZERCL: 1
+----- STARTING DECISION TREE OPTIMIZATION
+Misclassified: 151
+----- DECISION TREE OPTIMIZATION COMPLETED IN 0.001232(s)
+
+---------------------------------------- PRINTING SOLUTION ----------------------------------------
+(N0,A[0]<=6) 
+(N1,A[1]<=4) (N2,A[0]<=22) 
+(N3,A[3]<=16) (N4,A[3]<=49) (N5,A[0]<=21) (N6,A[3]<=49) 
+(N7,A[3]<=2) (N8,A[3]<=24) (N9,A[1]<=14) (N10,A[1]<=10) (N11,A[1]<=1) (L12,C1,1,0) (N13,A[3]<=48) (L14,C0,20,0) 
+(L15,C0,30,6) (L16,C0,65,31) (L17,C0,12,0) (L18,C0,25,8) (L19,C1,66,47) (L20,C1,6,0) (L21,C0,27,1) (L22,C0,24,19) (L23,C0,63,3) (L24,C0,220,35) (L27,C0,37,1) (L28,C1,1,0) 
+151/748 MISCLASSIFIED SAMPLES
+---------------------------------------------------------------------------------------------------
+
+----- END OF ALGORITHM
+----- DATASET [BREAST_CANCER_DIAGNOSTIC] LOADED IN 0.017774(s)
+----- NUMBER OF SAMPLES: 569
+----- NUMBER OF ATTRIBUTES: 30
+----- NUMBER OF CLASSES: 2
+----- SEED: 0; SIZERCL: 1
+----- STARTING DECISION TREE OPTIMIZATION
+Misclassified: 9
+----- DECISION TREE OPTIMIZATION COMPLETED IN 0.020141(s)
+
+---------------------------------------- PRINTING SOLUTION ----------------------------------------
+(N0,A[22]<=105.9) 
+(N1,A[27]<=0.1342) (N2,A[22]<=117.2) 
+(N3,A[13]<=48.84) (N4,A[21]<=27.2) (N5,A[24]<=0.1354) (N6,A[19]<=0.001519) 
+(N7,A[21]<=30.04) (N8,A[4]<=0.08757) (N9,A[28]<=0.3527) (L10,C1,9,0) (N11,A[21]<=25.5) (N12,A[1]<=11.28) (N13,A[0]<=17.85) (L14,C1,164,0) 
+(L15,C0,274,0) (L16,C0,40,2) (L17,C0,2,0) (L18,C1,2,0) (L19,C0,11,0) (L20,C1,4,1) (L23,C0,20,0) (L24,C1,8,6) (L25,C0,1,0) (L26,C1,22,0) (L27,C0,2,0) (L28,C1,1,0) 
+9/569 MISCLASSIFIED SAMPLES
+---------------------------------------------------------------------------------------------------
+
+----- END OF ALGORITHM
+----- DATASET [BREAST_CANCER_PROGNOSTIC] LOADED IN 0.008794(s)
+----- NUMBER OF SAMPLES: 198
+----- NUMBER OF ATTRIBUTES: 32
+----- NUMBER OF CLASSES: 2
+----- SEED: 0; SIZERCL: 1
+----- STARTING DECISION TREE OPTIMIZATION
+Misclassified: 28
+----- DECISION TREE OPTIMIZATION COMPLETED IN 0.007741(s)
+
+---------------------------------------- PRINTING SOLUTION ----------------------------------------
+(N0,A[31]<=3) 
+(N1,A[30]<=2.1) (N2,A[23]<=2089) 
+(N3,A[24]<=0.1481) (N4,A[1]<=26.29) (N5,A[28]<=0.3266) (L6,C1,6,0) 
+(L7,C0,45,0) (N8,A[4]<=0.115) (N9,A[20]<=26.46) (L10,C0,12,0) (N11,A[11]<=1.408) (N12,A[21]<=33.82) 
+(L17,C0,15,7) (L18,C0,14,0) (L19,C0,36,13) (L20,C1,5,0) (L23,C1,13,5) (L24,C0,9,1) (L25,C0,13,0) (L26,C0,2,2) 
+28/198 MISCLASSIFIED SAMPLES
+---------------------------------------------------------------------------------------------------
+
+----- END OF ALGORITHM
+----- DATASET [BREAST_CANCER] LOADED IN 0.007796(s)
+----- NUMBER OF SAMPLES: 699
+----- NUMBER OF ATTRIBUTES: 9
+----- NUMBER OF CLASSES: 2
+----- SEED: 0; SIZERCL: 1
+----- STARTING DECISION TREE OPTIMIZATION
+Misclassified: 21
+----- DECISION TREE OPTIMIZATION COMPLETED IN 0.001381(s)
+
+---------------------------------------- PRINTING SOLUTION ----------------------------------------
+(N0,A[1]<=1) 
+(N1,A[5]<=3) (N2,A[1]<=3) 
+(N3,A[0]<=5) (N4,A[0]<=2) (N5,A[5]<=1) (N6,A[0]<=5) 
+(L7,C0,407,0) (N8,A[2]<=1) (L9,C0,7,0) (N10,A[3]<=5) (N11,A[7]<=1) (N12,A[0]<=5) (N13,A[5]<=7) (L14,C1,106,0) 
+(L17,C0,2,0) (L18,C1,3,0) (L21,C1,9,0) (L22,C0,1,0) (L23,C0,19,0) (L24,C0,6,5) (L25,C1,19,10) (L26,C1,32,1) (L27,C1,23,5) (L28,C1,44,0) 
+21/699 MISCLASSIFIED SAMPLES
+---------------------------------------------------------------------------------------------------
+
+----- END OF ALGORITHM
+----- DATASET [CAR_EVALUATION] LOADED IN 0.011819(s)
+----- NUMBER OF SAMPLES: 1728
+----- NUMBER OF ATTRIBUTES: 6
+----- NUMBER OF CLASSES: 4
+----- SEED: 0; SIZERCL: 1
+----- STARTING DECISION TREE OPTIMIZATION
+Misclassified: 282
+----- DECISION TREE OPTIMIZATION COMPLETED IN 0.001042(s)
+
+---------------------------------------- PRINTING SOLUTION ----------------------------------------
+(N0,A[3]<=2) 
+(L1,C0,576,0) (N2,A[5]<=1) 
+(L5,C0,384,0) (N6,A[0]<=2) 
+(N13,A[1]<=2) (N14,A[1]<=3) 
+(L27,C2,69,123) (L28,C1,141,51) (L29,C1,180,108) (L30,C0,96,0) 
+282/1728 MISCLASSIFIED SAMPLES
+---------------------------------------------------------------------------------------------------
+
+----- END OF ALGORITHM
+----- DATASET [CHESS_KING_ROOK_VERSUS_KING_PAWN] LOADED IN 0.098745(s)
+----- NUMBER OF SAMPLES: 3196
+----- NUMBER OF ATTRIBUTES: 36
+----- NUMBER OF CLASSES: 2
+----- SEED: 0; SIZERCL: 1
+----- STARTING DECISION TREE OPTIMIZATION
+Misclassified: 189
+----- DECISION TREE OPTIMIZATION COMPLETED IN 0.00231(s)
+
+---------------------------------------- PRINTING SOLUTION ----------------------------------------
+(N0,A[20]=0) 
+(N1,A[9]=0) (L2,C1,584,0) 
+(N3,A[32]=0) (L4,C0,743,0) 
+(N7,A[31]=0) (N8,A[33]=0) 
+(L15,C1,1036,140) (L16,C0,120,3) (L17,C0,217,43) (L18,C0,307,3) 
+189/3196 MISCLASSIFIED SAMPLES
+---------------------------------------------------------------------------------------------------
+
+----- END OF ALGORITHM

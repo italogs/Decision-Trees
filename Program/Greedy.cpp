@@ -2,10 +2,8 @@
 
 void Greedy::run()
 {
-	printf("Starting Greedy Constructive Method\n");
 	// Call the recursive procedure on the root node at level 0
 	recursiveConstruction(0,0); 
-	solution->calculateMisclassifiedSamples();
 }
 
 void Greedy::recursiveConstruction(int node, int level)
@@ -197,7 +195,7 @@ void Greedy::recursiveConstruction(int node, int level)
 			}
 		}
 	}
-	int pick = std::rand() % this->sizeRCL;
+	int pick = std::rand() % bestSplits.size();
 	double bestSplitThrehold = bestSplits[pick].first;
 	int bestSplitAttribute = bestSplits[pick].second;
 	/* SPECIAL CASE TO HANDLE POSSIBLE CONTADICTIONS IN THE DATA */
@@ -205,8 +203,8 @@ void Greedy::recursiveConstruction(int node, int level)
 	if (allIdentical) return;
 
 	/* APPLY THE SPLIT AND RECURSIVE CALL */
-	solution->tree[node].splitAttribute = bestSplitAttribute;
 	solution->tree[node].splitValue = bestSplitThrehold;
+	solution->tree[node].splitAttribute = bestSplitAttribute;
 	solution->tree[node].nodeType = Node::NODE_INTERNAL;
 	solution->tree[2*node+1].nodeType = Node::NODE_LEAF ;
 	solution->tree[2*node+2].nodeType = Node::NODE_LEAF ;
