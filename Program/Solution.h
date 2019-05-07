@@ -47,6 +47,19 @@ public:
 		nbSamplesNode++;
 	}
 
+	void resetNode()
+	{
+		nodeType = NODE_NULL;
+		splitAttribute = -1;
+		splitValue = -1.e30;
+		nbSamplesClass = std::vector<int>(params->nbClasses, 0);
+		nbSamplesNode = 0;
+		majorityClass = -1;
+		maxSameClass = 0;
+		entropy = -1.e30;
+	}
+
+
 	Node(Params * params):params(params)
 	{
 		nodeType = NODE_NULL;
@@ -81,11 +94,34 @@ public:
 		return this->nbMisclassifiedSamples;
 	}
 
-	static void copySolution(Solution *destination, Solution *source)
+	void calculateMisclassifiedSamples()
 	{
-		destination->tree = source->tree;
+		this->nbMisclassifiedSamples = 0;
+		for (int d = 0; d <= params->maxDepth; d++)
+		{
+			for (int i = pow(2, d) - 1; i < pow(2, d + 1) - 1; i++)
+			{
+				if (tree[i].nodeType == Node::NODE_LEAF && tree[i].nbSamplesNode > 0)
+				{
+					int misclass = tree[i].nbSamplesNode - tree[i].nbSamplesClass[tree[i].majorityClass];
+					this->nbMisclassifiedSamples += misclass;
+				}
+			}
+		}
+	}
+
+	double getAccuracy()
+	{
+		double true_positive = (params->nbSamples - this->nbMisclassifiedSamples);
+		return (true_positive*100)/params->nbSamples;
+	}
+
+
+	static void copySolution(Solution *destination, Solution *source)
+	{		
+		std::copy(source->tree.begin(), source->tree.begin() + source->tree.size(), destination->tree.begin());
 		destination->params = source->params;
-		destination->nbMisclassifiedSamples = source->nbMisclassifiedSamples;
+		destination->calculateMisclassifiedSamples();
 	}
 
 	// Prints the final solution
@@ -100,7 +136,7 @@ public:
 			{
 				if (tree[i].nodeType == Node::NODE_INTERNAL)
 					std::cout << "(N" << i << ",A[" << tree[i].splitAttribute << "]" << (params->attributeTypes[tree[i].splitAttribute] == TYPE_NUMERICAL ? "<=" : "=") << tree[i].splitValue << ") ";
-				else if (tree[i].nodeType == Node::NODE_LEAF)
+				else if (tree[i].nodeType == Node::NODE_LEAF && tree[i].nbSamplesNode > 0)
 				{
 					int misclass = tree[i].nbSamplesNode - tree[i].nbSamplesClass[tree[i].majorityClass];
 					this->nbMisclassifiedSamples += misclass;

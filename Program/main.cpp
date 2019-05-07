@@ -16,32 +16,36 @@ int main(int argc, char *argv[])
 		// Run the greedy algorithm 
 		std::cout << "----- STARTING DECISION TREE OPTIMIZATION" << std::endl;
 		params.startTime = clock();
-		int MAX_IT = 1;
-		int MAX_ILS = 15;
+		int MAX_MS_IT = 2;
+		int MAX_ILS_IT = 10;
 		Solution best_global_solution(&params);
-		for(int i = 0 ; i < MAX_IT ; i++)
+		for(int ms_it = 0 ; ms_it < MAX_MS_IT ; ms_it++)
 		{
+			printf("Multi-start #%d: ",ms_it);
 			Solution solution(&params);
 			Greedy solver(&params,&solution);
 			solver.run();
-			int it_ils = 0;
-			while(it_ils < MAX_ILS)
+
+			printf("Initial solution: %d; ",solution.getMisclassifiedSamples());
+			int ils_it = 0;
+			
+			while(ils_it < MAX_ILS_IT)
 			{
-				solution.printAndExport(c.get_path_to_solution());
-				if(solution.getMisclassifiedSamples() < best_global_solution.getMisclassifiedSamples()) {
-					printf("solution.getMisclassifiedSamples() %d, best_global_solution.getMisclassifiedSamples() %d",solution.getMisclassifiedSamples(), best_global_solution.getMisclassifiedSamples());
+				LocalSearch ls(&params,&solution);
+				ls.run();
+				if(solution.getMisclassifiedSamples() < best_global_solution.getMisclassifiedSamples())
 					Solution::copySolution(&best_global_solution,&solution);
-					printf("solution.getMisclassifiedSamples() %d, best_global_solution.getMisclassifiedSamples() %d",solution.getMisclassifiedSamples(), best_global_solution.getMisclassifiedSamples());
-				}
-				it_ils++;
+				// ls.perturbation();
+				ils_it++;
 			}
-			printf("Misclassified: %d\n",solution.getMisclassifiedSamples());
+			printf("Final solution: <%d>; ",solution.getMisclassifiedSamples());
+			printf("\n");
 		}
+		printf("Final best solution: %d\n",best_global_solution.getMisclassifiedSamples());
+		printf("Accuracy: %.2lf%%",best_global_solution.getAccuracy());
+
 		params.endTime = clock();
 		std::cout << "----- DECISION TREE OPTIMIZATION COMPLETED IN " << (params.endTime - params.startTime) / (double)CLOCKS_PER_SEC << "(s)" << std::endl;
-		
-		// Printing the solution and exporting statistics (also export results into a file)
-		
 		std::cout << "----- END OF ALGORITHM" << std::endl;
 	}
 	return 0;

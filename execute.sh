@@ -17,5 +17,5 @@ INSTANCES=('p05.txt')
 
 for instance in "${INSTANCES[@]}" 
 do 
-    Program/dec-tree Datasets/$instance -depth 4 -t 600 -sizeRCL 3 -sol Solutions/$instance
+    Program/dec-tree Datasets/$instance -depth 4 -t 600 -sizeRCL 5 -sol Solutions/$instance
 done

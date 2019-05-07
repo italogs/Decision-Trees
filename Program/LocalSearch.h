@@ -7,18 +7,31 @@
 
 class LocalSearch
 {
-private:
+	private:
 
-	Params * params;		 // Access to the problem and dataset parameters
-	Solution * solution;	 // Access to the solution structure to be filled
+		Params * params;		 // Access to the problem and dataset parameters
+		Solution * solution;	 // Access to the solution structure to be filled
+		Solution * incumbentSolution; 
 
+		/* Data structures */
+		int target_node, target_level;
+		int nbInternalNodes;
+		std::vector<int> descendants;
+	public:
 
-public:
+		int getTreeLevelByNode(int node);
+		void getAllDescendants(int node, int level);
 
-    void run();
-
-	// Constructor
-	LocalSearch(Params * params, Solution * solution): params(params), solution(solution){};
+		void run();
+		void recursiveGreedyConstruction(int node, int level);
+		void move1(int node, int level);
+		void perturbation();
+		void perturbationMove(int node, int level);
+		// Constructor
+		LocalSearch(Params * params, Solution * solution): params(params), solution(solution)
+		{
+			this->nbInternalNodes = std::pow(2,params->maxDepth)-1;
+		};
 };
 
 #endif
