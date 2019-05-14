@@ -44,7 +44,7 @@ public:
 	Commandline(int argc, char* argv[])
 	{
 		command_ok = true;
-		if (argc % 2 != 0 || argc > 11 || argc < 2)
+		if (argc % 2 != 0 || argc > 12 || argc < 2)
 		{
 			std::cout << "ISSUE WITH THE NUMBER OF COMMANDLINE ARGUMENTS: " << argc << std::endl;
 			command_ok = false;

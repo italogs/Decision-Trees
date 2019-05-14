@@ -6,7 +6,8 @@ LIBS= -lm
 TARGETDIR=.
 CPPFLAGS += \
         -I. \
-		-std=c++11
+		-std=c++11 \
+		-Wunused
 
 OBJS2 = \
 		$(TARGETDIR)/main.o \

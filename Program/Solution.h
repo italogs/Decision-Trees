@@ -116,6 +116,10 @@ public:
 		return (true_positive*100)/params->nbSamples;
 	}
 
+	bool amIBetter(Solution *s)
+	{
+		return (this->getMisclassifiedSamples() < s->getMisclassifiedSamples());
+	}
 
 	static void copySolution(Solution *destination, Solution *source)
 	{		

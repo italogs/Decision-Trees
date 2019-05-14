@@ -20,13 +20,14 @@ class LocalSearch
 	public:
 
 		int getTreeLevelByNode(int node);
-		void getAllDescendants(int node, int level);
+		void setAllDescendants(int node, int level);
 
 		void run();
 		void recursiveGreedyConstruction(int node, int level);
 		void move1(int node, int level);
 		void perturbation();
 		void perturbationMove(int node, int level);
+		static bool increasingOrderHistory(std::pair < double, std::pair<double,int > > i, std::pair < double, std::pair<double,int > > j);
 		// Constructor
 		LocalSearch(Params * params, Solution * solution): params(params), solution(solution)
 		{
