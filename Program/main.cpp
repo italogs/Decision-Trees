@@ -4,6 +4,12 @@
 #include "Greedy.h"
 #include "LocalSearch.h"
 
+
+bool timeExceeded(Params *params)
+{
+	return (clock() - params->startTime) > params->maxTime;
+}
+
 int main(int argc, char *argv[])
 {
 	Commandline c(argc, argv);
@@ -16,11 +22,9 @@ int main(int argc, char *argv[])
 		// Run the greedy algorithm 
 		std::cout << "----- STARTING DECISION TREE OPTIMIZATION" << std::endl;
 		params.startTime = clock();
-		int MAX_MS_IT = 100, MAX_ILS_IT = 1000, ils_it;
-		
+		int MAX_ILS_IT = 200, ils_it;
 		Solution best_global_solution(&params);
-		
-		for(int ms_it = 0 ; ms_it < MAX_MS_IT ; ms_it++)
+		for(int ms_it = 0 ; !timeExceeded(&params) && best_global_solution.getMisclassifiedSamples() != 0; ms_it++)
 		{
 			printf("Multi-start #%d: ",ms_it);
 			Solution solution(&params);
@@ -36,21 +40,22 @@ int main(int argc, char *argv[])
 			{
 				if(solution.amIBetter(&best_local_search_solution))
 					Solution::copySolution(&best_local_search_solution,&solution);
-
-				if(solution.amIBetter(&best_global_solution))
-					Solution::copySolution(&best_global_solution,&solution);
+				Solution::copySolution(&solution,&best_local_search_solution);				
 				ls.perturbation();
 				ls.run();
 				ils_it++;
 			}
 			printf("Best LS <%d>; Best so far: <%d>;\n",best_local_search_solution.getMisclassifiedSamples(),best_global_solution.getMisclassifiedSamples());
+			if(solution.amIBetter(&best_global_solution))
+					Solution::copySolution(&best_global_solution,&solution);
 		}
-		printf("Final best solution: %d\n",best_global_solution.getMisclassifiedSamples());
-		printf("Final Accuracy: %.2lf%%\n",best_global_solution.getAccuracy());
+		printf("Final misclassified: %d\n",best_global_solution.getMisclassifiedSamples());
+		printf("Final accuracy: %.2lf%%\n",best_global_solution.getAccuracy());
 
 		params.endTime = clock();
-		std::cout << "----- DECISION TREE OPTIMIZATION COMPLETED IN " << (params.endTime - params.startTime) / (double)CLOCKS_PER_SEC << "(s)" << std::endl;
-		std::cout << "----- END OF ALGORITHM" << std::endl;
+		std::cout << "Final Time " << (params.endTime - params.startTime) / (double)CLOCKS_PER_SEC << " (s)" << std::endl;
+		std::cout << "----- END OF ALGORITHM\n" << std::endl;
 	}
 	return 0;
 }
+

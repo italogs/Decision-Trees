@@ -28,19 +28,11 @@ void LocalSearch::run()
 
 void LocalSearch::perturbation()
 {
-	// int level = (std::rand() % (params->maxDepth - 1)) ;
-	
-	target_node = (std::rand() % 2) + 1;
-	// printf("target_node: %d; ",target_node);
+	int nbInternalNodesExcept2ndlastLevel  = pow(2,params->maxDepth-1) - 1;
+	target_node = (std::rand() % nbInternalNodesExcept2ndlastLevel);
 	target_level = getTreeLevelByNode(target_node);
 	descendants.clear();
 	setAllDescendants(target_node,target_level);
-	// printf("descendants: ");
-	// for(int i = 0 ; i < descendants.size() ; i++)
-	// {
-	// 	printf("%d, ",descendants[i]);
-	// }
-	// printf("\n");
 
 	incumbentSolution = new Solution(params);
 	perturbationMove(0,0);

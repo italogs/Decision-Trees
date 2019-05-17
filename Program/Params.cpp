@@ -46,6 +46,8 @@ Params::Params(std::string pathToInstance, std::string pathToSolution, int seedR
 		std::cout << "----- NUMBER OF ATTRIBUTES: " << nbAttributes << std::endl;
 		std::cout << "----- NUMBER OF CLASSES: " << nbClasses << std::endl;
 		std::cout << "----- SEED: " << seedRNG << "; SIZERCL: " << sizeRCL << std::endl;
+		std::cout << "----- MAXDEPTH: " << maxDepth << std::endl;
+		std::cout << "----- MAXTIME: " << (maxTime / (double)CLOCKS_PER_SEC) << "(s)" << std::endl;
 	}
 	else
 		std::cout << "----- IMPOSSIBLE TO OPEN DATASET: " << pathToInstance << std::endl;
