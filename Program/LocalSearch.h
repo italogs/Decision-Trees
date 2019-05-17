@@ -28,6 +28,7 @@ class LocalSearch
 		void perturbation();
 		void perturbationMove(int node, int level);
 		static bool increasingOrderHistory(std::pair < double, std::pair<double,int > > i, std::pair < double, std::pair<double,int > > j);
+		static bool decreasingOrderHistory(std::pair < double, std::pair<double,int > > i, std::pair < double, std::pair<double,int > > j);
 		// Constructor
 		LocalSearch(Params * params, Solution * solution): params(params), solution(solution)
 		{

@@ -124,9 +124,9 @@ void LocalSearch::perturbationMove(int node, int level)
 							bestInformationGain = informationGain;
 							bestSplitAttribute = att;
 							bestSplitThrehold = attributeValue;
-							if(node == target_node)
-								historySplit.push_back(std::make_pair(informationGain,std::make_pair(bestSplitThrehold,bestSplitAttribute)));
 						}
+						if(node == target_node)
+							historySplit.push_back(std::make_pair(informationGain,std::make_pair(bestSplitThrehold,bestSplitAttribute)));
 					}
 				}
 			}
@@ -175,9 +175,10 @@ void LocalSearch::perturbationMove(int node, int level)
 							bestInformationGain = informationGain;
 							bestSplitAttribute = att;
 							bestSplitThrehold = level;
-							if(node == target_node)
-								historySplit.push_back(std::make_pair(informationGain,std::make_pair(bestSplitThrehold,bestSplitAttribute)));
+							
 						}
+						if(node == target_node)
+							historySplit.push_back(std::make_pair(informationGain,std::make_pair(bestSplitThrehold,bestSplitAttribute)));
 					}
 				}
 			}
@@ -190,8 +191,13 @@ void LocalSearch::perturbationMove(int node, int level)
 
 	if(historySplit.size() > 0)
 	{//Means that this is the target_node
-		std::sort(historySplit.begin(),historySplit.end(), increasingOrderHistory);
-		int chosenPos = (historySplit.size() < 3)? historySplit.size() - 1: 2;
+		std::sort(historySplit.begin(),historySplit.end(), decreasingOrderHistory);
+		int chosenPos = params->sizeRCL + 1;
+		if(historySplit.size() < chosenPos)
+			chosenPos = historySplit.size();
+		chosenPos--;
+		if(chosenPos < 0)
+			chosenPos = 0;
 		bestSplitThrehold = historySplit[chosenPos].second.first;
 		bestSplitAttribute = historySplit[chosenPos].second.second;
 	}
@@ -221,6 +227,11 @@ void LocalSearch::perturbationMove(int node, int level)
 bool LocalSearch::increasingOrderHistory(std::pair < double, std::pair<double,int > > i, std::pair < double, std::pair<double,int > > j)
 {
 	return i.first > j.first;
+}
+
+bool LocalSearch::decreasingOrderHistory(std::pair < double, std::pair<double,int > > i, std::pair < double, std::pair<double,int > > j)
+{
+	return i.first < j.first;
 }
 
 void LocalSearch::move1(int node, int level)

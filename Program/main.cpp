@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		// Run the greedy algorithm 
 		std::cout << "----- STARTING DECISION TREE OPTIMIZATION" << std::endl;
 		params.startTime = clock();
-		int MAX_ILS_IT = 200, ils_it;
+		int MAX_ILS_IT = 100, ils_it;
 		Solution best_global_solution(&params);
 		for(int ms_it = 0 ; !timeExceeded(&params) && best_global_solution.getMisclassifiedSamples() != 0; ms_it++)
 		{
@@ -45,9 +45,11 @@ int main(int argc, char *argv[])
 				ls.run();
 				ils_it++;
 			}
-			printf("Best LS <%d>; Best so far: <%d>;\n",best_local_search_solution.getMisclassifiedSamples(),best_global_solution.getMisclassifiedSamples());
+			if(solution.amIBetter(&best_local_search_solution))
+				Solution::copySolution(&best_local_search_solution,&solution);
 			if(solution.amIBetter(&best_global_solution))
 					Solution::copySolution(&best_global_solution,&solution);
+			printf("Best LS <%d>; Best so far: <%d>;\n",best_local_search_solution.getMisclassifiedSamples(),best_global_solution.getMisclassifiedSamples());
 		}
 		printf("Final misclassified: %d\n",best_global_solution.getMisclassifiedSamples());
 		printf("Final accuracy: %.2lf%%\n",best_global_solution.getAccuracy());
