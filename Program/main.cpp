@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 		printf("Final accuracy: %.2lf%%\n",best_global_solution.getAccuracy());
 
 		params.endTime = clock();
-		std::cout << "Final Time " << (params.endTime - params.startTime) / (double)CLOCKS_PER_SEC << " (s)" << std::endl;
+		std::cout << "Final Time: " << (params.endTime - params.startTime) / (double)CLOCKS_PER_SEC << " (s)" << std::endl;
 		std::cout << "----- END OF ALGORITHM\n" << std::endl;
 	}
 	return 0;
