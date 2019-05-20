@@ -9,7 +9,7 @@ make
 cd ..
 
 mytimestamp=`date "+%d-%m-%y-%H-%M-%S"`
-INSTANCES=('p01.txt' 'p02.txt' 'p03.txt' 'p04.txt' 'p05.txt' 'p06.txt' 'p07.txt' 'p08.txt' 'p09.txt' 'p10.txt') 
+INSTANCES=('p28.txt' 'p39.txt' 'p40.txt' 'p43.txt' 'p50.txt' 'p51.txt' 'p52.txt' 'p53.txt' 'p54.txt')
 mkdir -p Benchmarks/$mytimestamp/ 
 for instance in "${INSTANCES[@]}" 
 do 
@@ -21,7 +21,7 @@ do
 done
 
 mytimestamp=`date "+%d-%m-%y-%H-%M-%S"`
-INSTANCES=('p01.txt' 'p02.txt' 'p03.txt' 'p04.txt' 'p05.txt' 'p06.txt' 'p07.txt' 'p08.txt' 'p09.txt' 'p10.txt') 
+INSTANCES=('p28.txt' 'p39.txt' 'p40.txt' 'p43.txt' 'p50.txt' 'p51.txt' 'p52.txt' 'p53.txt' 'p54.txt')
 mkdir -p Benchmarks/$mytimestamp/ 
 for instance in "${INSTANCES[@]}" 
 do 
@@ -34,7 +34,7 @@ done
 
 
 mytimestamp=`date "+%d-%m-%y-%H-%M-%S"`
-INSTANCES=('p01.txt' 'p02.txt' 'p03.txt' 'p04.txt' 'p05.txt' 'p06.txt' 'p07.txt' 'p08.txt' 'p09.txt' 'p10.txt') 
+INSTANCES=('p28.txt' 'p39.txt' 'p40.txt' 'p43.txt' 'p50.txt' 'p51.txt' 'p52.txt' 'p53.txt' 'p54.txt')
 mkdir -p Benchmarks/$mytimestamp/ 
 for instance in "${INSTANCES[@]}" 
 do 
@@ -44,3 +44,51 @@ do
         cat Benchmarks/$mytimestamp/$instance-$seed.txt | grep "Final" >> Benchmarks/$mytimestamp/compiled-$instance.txt
     done
 done
+
+
+
+# mytimestamp=`date "+%d-%m-%y-%H-%M-%S"`
+# INSTANCES=('p01.txt' 'p02.txt' 'p03.txt' 'p04.txt' 'p05.txt' 'p06.txt' 'p07.txt' 'p08.txt' 'p09.txt' 'p10.txt') 
+# mkdir -p Benchmarks/$mytimestamp/ 
+# for instance in "${INSTANCES[@]}" 
+# do 
+#     for seed in {1..5}
+#     do
+#         Program/dec-tree Datasets/$instance -t 300 -sizeRCL 10 -sol Solutions/$instance -seed $seed > Benchmarks/$mytimestamp/$instance-$seed.txt        
+#         cat Benchmarks/$mytimestamp/$instance-$seed.txt | grep "Final" >> Benchmarks/$mytimestamp/compiled-$instance.txt
+#     done
+# done
+
+# mytimestamp=`date "+%d-%m-%y-%H-%M-%S"`
+# INSTANCES=('p01.txt' 'p02.txt' 'p03.txt' 'p04.txt' 'p05.txt' 'p06.txt' 'p07.txt' 'p08.txt' 'p09.txt' 'p10.txt') 
+# mkdir -p Benchmarks/$mytimestamp/ 
+# for instance in "${INSTANCES[@]}" 
+# do 
+#     for seed in {1..5}
+#     do
+#         Program/dec-tree Datasets/$instance -t 300 -sizeRCL 5 -sol Solutions/$instance -seed $seed > Benchmarks/$mytimestamp/$instance-$seed.txt        
+#         cat Benchmarks/$mytimestamp/$instance-$seed.txt | grep "Final" >> Benchmarks/$mytimestamp/compiled-$instance.txt
+#     done
+# done
+
+
+# mytimestamp=`date "+%d-%m-%y-%H-%M-%S"`
+# INSTANCES=('p01.txt' 'p02.txt' 'p03.txt' 'p04.txt' 'p05.txt' 'p06.txt' 'p07.txt' 'p08.txt' 'p09.txt' 'p10.txt') 
+# mkdir -p Benchmarks/$mytimestamp/ 
+# for instance in "${INSTANCES[@]}" 
+# do 
+#     for seed in {1..5}
+#     do
+#         Program/dec-tree Datasets/$instance -t 300 -sizeRCL 3 -sol Solutions/$instance -seed $seed > Benchmarks/$mytimestamp/$instance-$seed.txt        
+#         cat Benchmarks/$mytimestamp/$instance-$seed.txt | grep "Final" >> Benchmarks/$mytimestamp/compiled-$instance.txt
+#     done
+# done
+
+
+
+
+
+
+
+
+
