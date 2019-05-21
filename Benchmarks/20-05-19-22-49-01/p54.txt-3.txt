@@ -1,0 +1,15 @@
+----- INITIALIZING RNG WITH SEED: 3
+----- DATASET [WINE] LOADED IN 0.004453(s)
+----- NUMBER OF SAMPLES: 178
+----- NUMBER OF ATTRIBUTES: 13
+----- NUMBER OF CLASSES: 3
+----- SEED: 3; SIZERCL: 5
+----- MAXDEPTH: 4
+----- MAXTIME: 300(s)
+----- STARTING DECISION TREE OPTIMIZATION
+Multi-start #0: Initial solution: 3; Best LS <0>; Best so far: <0>;
+Final misclassified: 0
+Final accuracy: 100.00%
+Final Time: 0.48619 (s)
+----- END OF ALGORITHM
+

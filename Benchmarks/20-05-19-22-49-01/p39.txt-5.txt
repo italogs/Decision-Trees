@@ -1,0 +1,64 @@
+----- INITIALIZING RNG WITH SEED: 5
+----- DATASET [QSAR_BIODEGRADATION] LOADED IN 0.038425(s)
+----- NUMBER OF SAMPLES: 1055
+----- NUMBER OF ATTRIBUTES: 41
+----- NUMBER OF CLASSES: 2
+----- SEED: 5; SIZERCL: 5
+----- MAXDEPTH: 4
+----- MAXTIME: 300(s)
+----- STARTING DECISION TREE OPTIMIZATION
+Multi-start #0: Initial solution: 166; Best LS <145>; Best so far: <145>;
+Multi-start #1: Initial solution: 153; Best LS <139>; Best so far: <139>;
+Multi-start #2: Initial solution: 159; Best LS <138>; Best so far: <138>;
+Multi-start #3: Initial solution: 153; Best LS <136>; Best so far: <136>;
+Multi-start #4: Initial solution: 161; Best LS <147>; Best so far: <136>;
+Multi-start #5: Initial solution: 166; Best LS <145>; Best so far: <136>;
+Multi-start #6: Initial solution: 143; Best LS <137>; Best so far: <136>;
+Multi-start #7: Initial solution: 163; Best LS <137>; Best so far: <136>;
+Multi-start #8: Initial solution: 168; Best LS <147>; Best so far: <136>;
+Multi-start #9: Initial solution: 163; Best LS <137>; Best so far: <136>;
+Multi-start #10: Initial solution: 158; Best LS <147>; Best so far: <136>;
+Multi-start #11: Initial solution: 146; Best LS <136>; Best so far: <136>;
+Multi-start #12: Initial solution: 164; Best LS <135>; Best so far: <135>;
+Multi-start #13: Initial solution: 178; Best LS <136>; Best so far: <135>;
+Multi-start #14: Initial solution: 173; Best LS <136>; Best so far: <135>;
+Multi-start #15: Initial solution: 176; Best LS <137>; Best so far: <135>;
+Multi-start #16: Initial solution: 151; Best LS <137>; Best so far: <135>;
+Multi-start #17: Initial solution: 153; Best LS <137>; Best so far: <135>;
+Multi-start #18: Initial solution: 161; Best LS <137>; Best so far: <135>;
+Multi-start #19: Initial solution: 162; Best LS <145>; Best so far: <135>;
+Multi-start #20: Initial solution: 187; Best LS <137>; Best so far: <135>;
+Multi-start #21: Initial solution: 169; Best LS <145>; Best so far: <135>;
+Multi-start #22: Initial solution: 148; Best LS <137>; Best so far: <135>;
+Multi-start #23: Initial solution: 159; Best LS <139>; Best so far: <135>;
+Multi-start #24: Initial solution: 161; Best LS <145>; Best so far: <135>;
+Multi-start #25: Initial solution: 149; Best LS <137>; Best so far: <135>;
+Multi-start #26: Initial solution: 160; Best LS <147>; Best so far: <135>;
+Multi-start #27: Initial solution: 167; Best LS <137>; Best so far: <135>;
+Multi-start #28: Initial solution: 157; Best LS <133>; Best so far: <133>;
+Multi-start #29: Initial solution: 153; Best LS <136>; Best so far: <133>;
+Multi-start #30: Initial solution: 150; Best LS <136>; Best so far: <133>;
+Multi-start #31: Initial solution: 162; Best LS <147>; Best so far: <133>;
+Multi-start #32: Initial solution: 154; Best LS <138>; Best so far: <133>;
+Multi-start #33: Initial solution: 167; Best LS <145>; Best so far: <133>;
+Multi-start #34: Initial solution: 183; Best LS <136>; Best so far: <133>;
+Multi-start #35: Initial solution: 163; Best LS <145>; Best so far: <133>;
+Multi-start #36: Initial solution: 163; Best LS <137>; Best so far: <133>;
+Multi-start #37: Initial solution: 150; Best LS <137>; Best so far: <133>;
+Multi-start #38: Initial solution: 160; Best LS <135>; Best so far: <133>;
+Multi-start #39: Initial solution: 166; Best LS <145>; Best so far: <133>;
+Multi-start #40: Initial solution: 167; Best LS <145>; Best so far: <133>;
+Multi-start #41: Initial solution: 151; Best LS <136>; Best so far: <133>;
+Multi-start #42: Initial solution: 145; Best LS <136>; Best so far: <133>;
+Multi-start #43: Initial solution: 172; Best LS <136>; Best so far: <133>;
+Multi-start #44: Initial solution: 167; Best LS <145>; Best so far: <133>;
+Multi-start #45: Initial solution: 166; Best LS <147>; Best so far: <133>;
+Multi-start #46: Initial solution: 152; Best LS <140>; Best so far: <133>;
+Multi-start #47: Initial solution: 157; Best LS <147>; Best so far: <133>;
+Multi-start #48: Initial solution: 146; Best LS <135>; Best so far: <133>;
+Multi-start #49: Initial solution: 177; Best LS <136>; Best so far: <133>;
+Final misclassified: 133
+Final accuracy: 87.39%
+Final Time: 301.824 (s)
+----- END OF ALGORITHM
+

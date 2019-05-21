@@ -1,0 +1,15 @@
+----- INITIALIZING RNG WITH SEED: 2
+----- DATASET [ACUTE_INFLAMMATIONS_2] LOADED IN 0.003266(s)
+----- NUMBER OF SAMPLES: 120
+----- NUMBER OF ATTRIBUTES: 6
+----- NUMBER OF CLASSES: 2
+----- SEED: 2; SIZERCL: 10
+----- MAXDEPTH: 4
+----- MAXTIME: 300(s)
+----- STARTING DECISION TREE OPTIMIZATION
+Multi-start #0: Initial solution: 0; Best LS <0>; Best so far: <0>;
+Final misclassified: 0
+Final accuracy: 100.00%
+Final Time 0.029241 (s)
+----- END OF ALGORITHM
+

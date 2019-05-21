@@ -1,0 +1,15 @@
+----- INITIALIZING RNG WITH SEED: 3
+----- DATASET [THYROID_DISEASE_NEW_THYROID] LOADED IN 0.003346(s)
+----- NUMBER OF SAMPLES: 215
+----- NUMBER OF ATTRIBUTES: 5
+----- NUMBER OF CLASSES: 3
+----- SEED: 3; SIZERCL: 3
+----- MAXDEPTH: 4
+----- MAXTIME: 300(s)
+----- STARTING DECISION TREE OPTIMIZATION
+Multi-start #0: Initial solution: 2; Best LS <0>; Best so far: <0>;
+Final misclassified: 0
+Final accuracy: 100.00%
+Final Time: 0.213283 (s)
+----- END OF ALGORITHM
+

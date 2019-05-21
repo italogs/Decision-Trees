@@ -1,0 +1,29 @@
+----- INITIALIZING RNG WITH SEED: 3
+----- DATASET [SPAMBASE] LOADED IN 0.211721(s)
+----- NUMBER OF SAMPLES: 4601
+----- NUMBER OF ATTRIBUTES: 57
+----- NUMBER OF CLASSES: 2
+----- SEED: 3; SIZERCL: 10
+----- MAXDEPTH: 4
+----- MAXTIME: 300(s)
+----- STARTING DECISION TREE OPTIMIZATION
+Multi-start #0: Initial solution: 444; Best LS <416>; Best so far: <416>;
+Multi-start #1: Initial solution: 432; Best LS <416>; Best so far: <416>;
+Multi-start #2: Initial solution: 474; Best LS <416>; Best so far: <416>;
+Multi-start #3: Initial solution: 449; Best LS <403>; Best so far: <416>;
+Multi-start #4: Initial solution: 458; Best LS <419>; Best so far: <416>;
+Multi-start #5: Initial solution: 441; Best LS <414>; Best so far: <414>;
+Multi-start #6: Initial solution: 443; Best LS <415>; Best so far: <414>;
+Multi-start #7: Initial solution: 439; Best LS <407>; Best so far: <414>;
+Multi-start #8: Initial solution: 447; Best LS <407>; Best so far: <414>;
+Multi-start #9: Initial solution: 456; Best LS <406>; Best so far: <406>;
+Multi-start #10: Initial solution: 440; Best LS <419>; Best so far: <406>;
+Multi-start #11: Initial solution: 452; Best LS <415>; Best so far: <406>;
+Multi-start #12: Initial solution: 435; Best LS <412>; Best so far: <406>;
+Multi-start #13: Initial solution: 455; Best LS <406>; Best so far: <406>;
+Multi-start #14: Initial solution: 461; Best LS <414>; Best so far: <406>;
+Final misclassified: 406
+Final accuracy: 91.18%
+Final Time: 319.299 (s)
+----- END OF ALGORITHM
+

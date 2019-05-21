@@ -1,0 +1,15 @@
+Final misclassified: 0
+Final accuracy: 100.00%
+Final Time: 1.16785 (s)
+Final misclassified: 0
+Final accuracy: 100.00%
+Final Time: 1.11751 (s)
+Final misclassified: 0
+Final accuracy: 100.00%
+Final Time: 1.1721 (s)
+Final misclassified: 0
+Final accuracy: 100.00%
+Final Time: 1.09185 (s)
+Final misclassified: 0
+Final accuracy: 100.00%
+Final Time: 1.08392 (s)

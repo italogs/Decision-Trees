@@ -1,0 +1,40 @@
+----- INITIALIZING RNG WITH SEED: 5
+----- DATASET [SEEDS] LOADED IN 0.003788(s)
+----- NUMBER OF SAMPLES: 210
+----- NUMBER OF ATTRIBUTES: 7
+----- NUMBER OF CLASSES: 3
+----- SEED: 5; SIZERCL: 10
+----- MAXDEPTH: 4
+----- MAXTIME: 300(s)
+----- STARTING DECISION TREE OPTIMIZATION
+Multi-start #0: Initial solution: 13; Best LS <6>; Best so far: <6>;
+Multi-start #1: Initial solution: 10; Best LS <6>; Best so far: <6>;
+Multi-start #2: Initial solution: 13; Best LS <6>; Best so far: <6>;
+Multi-start #3: Initial solution: 13; Best LS <6>; Best so far: <6>;
+Multi-start #4: Initial solution: 9; Best LS <6>; Best so far: <6>;
+Multi-start #5: Initial solution: 11; Best LS <6>; Best so far: <6>;
+Multi-start #6: Initial solution: 14; Best LS <6>; Best so far: <6>;
+Multi-start #7: Initial solution: 11; Best LS <6>; Best so far: <6>;
+Multi-start #8: Initial solution: 11; Best LS <6>; Best so far: <6>;
+Multi-start #9: Initial solution: 13; Best LS <6>; Best so far: <6>;
+Multi-start #10: Initial solution: 12; Best LS <6>; Best so far: <6>;
+Multi-start #11: Initial solution: 15; Best LS <6>; Best so far: <6>;
+Multi-start #12: Initial solution: 11; Best LS <6>; Best so far: <6>;
+Multi-start #13: Initial solution: 9; Best LS <6>; Best so far: <6>;
+Multi-start #14: Initial solution: 5; Best LS <1>; Best so far: <1>;
+Multi-start #15: Initial solution: 15; Best LS <6>; Best so far: <1>;
+Multi-start #16: Initial solution: 9; Best LS <6>; Best so far: <1>;
+Multi-start #17: Initial solution: 7; Best LS <2>; Best so far: <1>;
+Multi-start #18: Initial solution: 9; Best LS <6>; Best so far: <1>;
+Multi-start #19: Initial solution: 12; Best LS <6>; Best so far: <1>;
+Multi-start #20: Initial solution: 12; Best LS <6>; Best so far: <1>;
+Multi-start #21: Initial solution: 13; Best LS <6>; Best so far: <1>;
+Multi-start #22: Initial solution: 13; Best LS <6>; Best so far: <1>;
+Multi-start #23: Initial solution: 7; Best LS <6>; Best so far: <1>;
+Multi-start #24: Initial solution: 8; Best LS <1>; Best so far: <1>;
+Multi-start #25: Initial solution: 8; Best LS <0>; Best so far: <0>;
+Final misclassified: 0
+Final accuracy: 100.00%
+Final Time: 9.69636 (s)
+----- END OF ALGORITHM
+

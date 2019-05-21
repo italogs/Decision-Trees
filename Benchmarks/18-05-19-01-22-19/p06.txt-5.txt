@@ -1,0 +1,71 @@
+----- INITIALIZING RNG WITH SEED: 5
+----- DATASET [BREAST_CANCER_DIAGNOSTIC] LOADED IN 0.017971(s)
+----- NUMBER OF SAMPLES: 569
+----- NUMBER OF ATTRIBUTES: 30
+----- NUMBER OF CLASSES: 2
+----- SEED: 5; SIZERCL: 5
+----- MAXDEPTH: 4
+----- MAXTIME: 300(s)
+----- STARTING DECISION TREE OPTIMIZATION
+Multi-start #0: Initial solution: 11; Best LS <5>; Best so far: <6>;
+Multi-start #1: Initial solution: 15; Best LS <5>; Best so far: <5>;
+Multi-start #2: Initial solution: 13; Best LS <5>; Best so far: <5>;
+Multi-start #3: Initial solution: 11; Best LS <5>; Best so far: <5>;
+Multi-start #4: Initial solution: 16; Best LS <5>; Best so far: <5>;
+Multi-start #5: Initial solution: 13; Best LS <5>; Best so far: <5>;
+Multi-start #6: Initial solution: 10; Best LS <5>; Best so far: <5>;
+Multi-start #7: Initial solution: 14; Best LS <5>; Best so far: <5>;
+Multi-start #8: Initial solution: 11; Best LS <5>; Best so far: <5>;
+Multi-start #9: Initial solution: 11; Best LS <5>; Best so far: <5>;
+Multi-start #10: Initial solution: 11; Best LS <5>; Best so far: <5>;
+Multi-start #11: Initial solution: 15; Best LS <5>; Best so far: <5>;
+Multi-start #12: Initial solution: 9; Best LS <5>; Best so far: <5>;
+Multi-start #13: Initial solution: 14; Best LS <5>; Best so far: <5>;
+Multi-start #14: Initial solution: 13; Best LS <5>; Best so far: <5>;
+Multi-start #15: Initial solution: 12; Best LS <5>; Best so far: <5>;
+Multi-start #16: Initial solution: 14; Best LS <5>; Best so far: <5>;
+Multi-start #17: Initial solution: 13; Best LS <5>; Best so far: <5>;
+Multi-start #18: Initial solution: 12; Best LS <5>; Best so far: <5>;
+Multi-start #19: Initial solution: 10; Best LS <5>; Best so far: <5>;
+Multi-start #20: Initial solution: 12; Best LS <5>; Best so far: <5>;
+Multi-start #21: Initial solution: 12; Best LS <5>; Best so far: <5>;
+Multi-start #22: Initial solution: 14; Best LS <5>; Best so far: <5>;
+Multi-start #23: Initial solution: 14; Best LS <5>; Best so far: <5>;
+Multi-start #24: Initial solution: 11; Best LS <5>; Best so far: <5>;
+Multi-start #25: Initial solution: 8; Best LS <5>; Best so far: <5>;
+Multi-start #26: Initial solution: 12; Best LS <5>; Best so far: <5>;
+Multi-start #27: Initial solution: 9; Best LS <5>; Best so far: <5>;
+Multi-start #28: Initial solution: 13; Best LS <5>; Best so far: <5>;
+Multi-start #29: Initial solution: 12; Best LS <5>; Best so far: <5>;
+Multi-start #30: Initial solution: 11; Best LS <5>; Best so far: <5>;
+Multi-start #31: Initial solution: 13; Best LS <5>; Best so far: <5>;
+Multi-start #32: Initial solution: 11; Best LS <5>; Best so far: <5>;
+Multi-start #33: Initial solution: 13; Best LS <5>; Best so far: <5>;
+Multi-start #34: Initial solution: 9; Best LS <5>; Best so far: <5>;
+Multi-start #35: Initial solution: 17; Best LS <5>; Best so far: <5>;
+Multi-start #36: Initial solution: 11; Best LS <5>; Best so far: <5>;
+Multi-start #37: Initial solution: 11; Best LS <5>; Best so far: <5>;
+Multi-start #38: Initial solution: 14; Best LS <5>; Best so far: <5>;
+Multi-start #39: Initial solution: 10; Best LS <5>; Best so far: <5>;
+Multi-start #40: Initial solution: 8; Best LS <5>; Best so far: <5>;
+Multi-start #41: Initial solution: 24; Best LS <5>; Best so far: <5>;
+Multi-start #42: Initial solution: 15; Best LS <5>; Best so far: <5>;
+Multi-start #43: Initial solution: 13; Best LS <5>; Best so far: <5>;
+Multi-start #44: Initial solution: 18; Best LS <5>; Best so far: <5>;
+Multi-start #45: Initial solution: 15; Best LS <5>; Best so far: <5>;
+Multi-start #46: Initial solution: 9; Best LS <5>; Best so far: <5>;
+Multi-start #47: Initial solution: 17; Best LS <5>; Best so far: <5>;
+Multi-start #48: Initial solution: 10; Best LS <5>; Best so far: <5>;
+Multi-start #49: Initial solution: 11; Best LS <5>; Best so far: <5>;
+Multi-start #50: Initial solution: 9; Best LS <5>; Best so far: <5>;
+Multi-start #51: Initial solution: 14; Best LS <5>; Best so far: <5>;
+Multi-start #52: Initial solution: 13; Best LS <5>; Best so far: <5>;
+Multi-start #53: Initial solution: 17; Best LS <5>; Best so far: <5>;
+Multi-start #54: Initial solution: 13; Best LS <5>; Best so far: <5>;
+Multi-start #55: Initial solution: 14; Best LS <5>; Best so far: <5>;
+Multi-start #56: Initial solution: 18; Best LS <5>; Best so far: <5>;
+Final misclassified: 5
+Final accuracy: 99.12%
+Final Time 300.987 (s)
+----- END OF ALGORITHM
+

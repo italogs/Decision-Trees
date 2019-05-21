@@ -1,0 +1,15 @@
+Final misclassified: 23
+Final accuracy: 88.38
+Final Time: 301.41 (s)
+Final misclassified: 23
+Final accuracy: 88.38
+Final Time: 300.401 (s)
+Final misclassified: 23
+Final accuracy: 88.38
+Final Time: 301.232 (s)
+Final misclassified: 23
+Final accuracy: 88.38
+Final Time: 301.528 (s)
+Final misclassified: 23
+Final accuracy: 88.38
+Final Time: 300.111 (s)

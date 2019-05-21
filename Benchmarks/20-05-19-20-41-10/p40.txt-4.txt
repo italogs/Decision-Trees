@@ -1,0 +1,25 @@
+----- INITIALIZING RNG WITH SEED: 4
+----- DATASET [SEEDS] LOADED IN 0.003802(s)
+----- NUMBER OF SAMPLES: 210
+----- NUMBER OF ATTRIBUTES: 7
+----- NUMBER OF CLASSES: 3
+----- SEED: 4; SIZERCL: 10
+----- MAXDEPTH: 4
+----- MAXTIME: 300(s)
+----- STARTING DECISION TREE OPTIMIZATION
+Multi-start #0: Initial solution: 5; Best LS <1>; Best so far: <1>;
+Multi-start #1: Initial solution: 11; Best LS <6>; Best so far: <1>;
+Multi-start #2: Initial solution: 10; Best LS <6>; Best so far: <1>;
+Multi-start #3: Initial solution: 13; Best LS <6>; Best so far: <1>;
+Multi-start #4: Initial solution: 8; Best LS <2>; Best so far: <1>;
+Multi-start #5: Initial solution: 14; Best LS <6>; Best so far: <1>;
+Multi-start #6: Initial solution: 9; Best LS <6>; Best so far: <1>;
+Multi-start #7: Initial solution: 9; Best LS <6>; Best so far: <1>;
+Multi-start #8: Initial solution: 13; Best LS <6>; Best so far: <1>;
+Multi-start #9: Initial solution: 11; Best LS <6>; Best so far: <1>;
+Multi-start #10: Initial solution: 8; Best LS <0>; Best so far: <0>;
+Final misclassified: 0
+Final accuracy: 100.00%
+Final Time: 4.11213 (s)
+----- END OF ALGORITHM
+
